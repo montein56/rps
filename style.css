@@ -1,3 +1,16 @@
 .compChoice{
     color: blueviolet;
 }
+
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div img{
+    /* padding: 0 5px; */
+    border: solid red 2px;
+    height: auto;
+    width: 120px;
+}

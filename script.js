@@ -1,8 +1,9 @@
 console.log('Happy New year');
 
-const arr = ['ROCK', 'PAPER', 'SCISSORS'];
+
 
 function computerPlay() {
+    const arr = ['ROCK', 'PAPER', 'SCISSORS'];
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
@@ -11,12 +12,27 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         result = 'TIE GAME';
         return result;
-    } else {
-        result = 'Somebody won and someone else lost';
+    } else if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
+        result = `You lose. PAPER covers ROCK`;
+        return result;
+    } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
+        result = `YOU WIN. ROCK crushes SCISSORS`;
+        return result;
+    } else if (playerSelection == 'PAPER' && computerSelection == 'ROCK') {
+        result = `YOU WIN. PAPER covers ROCK`;
+        return result;
+    } else if (playerSelection == 'PAPER' && computerSelection == 'SCISSORS') {
+        result = `You lose. SCISSORS cut PAPER`;
+        return result;
+    } else if (playerSelection == 'SCISSORS' && computerSelection == 'ROCK') {
+        result = `You lose. ROCK crushes SCISSORS}`;
+        return result;
+    } else if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
+        result = `YOU WIN. SCISSORS cut PAPER`;
         return result;
     }
 }
-// const computerSelection = () => arr[Math.floor(Math.random() * arr.length)];
+
 const computerSelection = computerPlay();
 console.log(`Computer chose ${computerSelection}`);
 
@@ -26,7 +42,7 @@ console.log(`You selected ${playerSelection}`);
 console.log(playRound(playerSelection, computerSelection));
 
 
-
+// const computerSelection = () => arr[Math.floor(Math.random() * arr.length)];
 
 // function computerPlay() {
 //     computerSelection = arr[Math.floor(Math.random() * arr.length)];
