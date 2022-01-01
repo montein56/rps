@@ -1,6 +1,3 @@
-console.log('Happy New year');
-
-
 
 function computerPlay() {
     const arr = ['ROCK', 'PAPER', 'SCISSORS'];
@@ -33,13 +30,22 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const computerSelection = computerPlay();
-console.log(`Computer chose ${computerSelection}`);
+function game() {
+    const computerSelection = computerPlay();
+    console.log(`Computer chose ${computerSelection}`);
 
-const playerSelection = (window.prompt("Select your weapon", "Rock - Paper - Scissors")).toUpperCase();
-console.log(`You selected ${playerSelection}`);
+    const playerSelection = (window.prompt("Select your weapon", "Rock - Paper - Scissors")).toUpperCase();
+    console.log(`You selected ${playerSelection}`);
+    
+    playRound(playerSelection, computerSelection);
+}
 
-console.log(playRound(playerSelection, computerSelection));
+console.log('Happy New year');
+game();
+
+
+
+// console.log(playRound(playerSelection, computerSelection));
 
 
 // const computerSelection = () => arr[Math.floor(Math.random() * arr.length)];
