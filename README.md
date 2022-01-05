@@ -23,3 +23,9 @@ Here is the plan:
         // }
 1 Jan:
     js file is messed up. Must pull last version from repo.
+4 Jan: js file messup was cleared on 1 Jan. Already set to play till one player reaches score of 5.
+    TODAY: - UI with buttons, sound, some animation perhaps!
+    Commit #1
+        Added a link to a separate 'credits' page that has a 'back to game' button
+            credit for sound and image files
+        Fixed userInput staying the same, game will now quit.

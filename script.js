@@ -1,8 +1,10 @@
+// Get random play by computer; called by game()
 function computerPlay() {
     const arr = ['ROCK', 'PAPER', 'SCISSORS'];
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// CAlled by game(); Assesses player choice against computer's and shows result- win/lose; update scores
 function playRound(playerSelection, computerSelection) {
     result = "";
     if (playerSelection == computerSelection) {
@@ -28,15 +30,23 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// run the game
 function game() {
     while (playerScore < 5 && computerScore < 5){
-    
+    let playerSelection="";
+    let userInput=null;
     const computerSelection = computerPlay();
-    console.log(`Computer chose ${computerSelection}`);
-
-    const playerSelection = (window.prompt("Select your weapon", "Rock - Paper - Scissors")).toUpperCase();
+    
+// Screen for user input to allow only R, P or S
+    userInput = window.prompt("Select your weapon", "ROCK - PAPER - SCISSORS : To exit, type 'q'");
+    
+    while (userInput == null || userInput == "" || userInput == 'q' || userInput == "ROCK - PAPER - SCISSORS : To exit, type 'q'") {
+        console.log('Either you chose to quit OR your input is invalid. Game is quitting');
+        return;
+    }
+    playerSelection = userInput.toUpperCase();
     console.log(`You selected ${playerSelection}`);
-
+    
     playRound(playerSelection, computerSelection);
     gameTally++;
 
@@ -45,28 +55,12 @@ function game() {
         console.log ('!! Game Over: YOU WIN !!')
     } else if (computerScore == 5) {
         console.log(' Game Over: YOU LOST :( ')
-
     }
-
 }
-
 }
-console.log('Happy New year');
 
 let playerScore = 0;
 let computerScore = 0;
 let gameTally = 0;
 
-game();
-
-
-
-// console.log(playRound(playerSelection, computerSelection));
-
-
-// const computerSelection = () => arr[Math.floor(Math.random() * arr.length)];
-
-// function computerPlay() {
-//     computerSelection = arr[Math.floor(Math.random() * arr.length)];
-//     return computerSelection;
-// }
+// game();
