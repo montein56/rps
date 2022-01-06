@@ -29,3 +29,7 @@ Here is the plan:
         Added a link to a separate 'credits' page that has a 'back to game' button
             credit for sound and image files
         Fixed userInput staying the same, game will now quit.
+        Added 'defer' to script tag in html head
+5 Jan:
+    Re-studied Flex & StickyFooters to keep images at base of screen
+    4:30 pm. Going well. Flexing nicely - mobile modes too [@media]. Added boxes to display opponents' choices.

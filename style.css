@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   align-items: center;
-  background-image: linear-gradient(#264653, #2a9d8f, #e9c46a);
+  background-image: linear-gradient(#09152b, #035cc2, #00b0fc);
 }
 body {
   display: flex;
@@ -12,73 +12,84 @@ header{
     display: flex;
     justify-content: space-evenly;
 }
-@media screen and (max-width: 600px) {
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-}
+
 h1 {
-  padding: 22px;
-  text-align: center;
-  margin: 0;
-  color: #e9c46a;
-}
-.content {
+    padding: 22px;
+    text-align: center;
+    margin: 0;
+    color: #ecf9ff;
+    text-shadow: 1px 1px 2px rgb(231, 192, 192), 0 0 25px rgb(143, 143, 190), 0 0 5px rgb(152, 160, 79);
+  }
+
+.results {
   display: flex;
   flex: 1 1 auto;
-  width: 100%;
-  border: solid blue 2px;
   justify-content: space-evenly;
-  /* margin-bottom: 22px; */
+  align-items: center;
 }
-.score{
-  width: 50%;
-  border: solid pink 3px;
-}
-.selections{
-    border: rgb(219, 192, 255) solid 3px;
-    width: 50%;
-}
-
 
 .thumbArea {
   display:flex;
-  /* flex: 1 0 auto; */
   height: auto;
-  /* border: solid pink 3px; */
-  /* flex-shrink: 0; */
   justify-content: space-evenly;
   max-width: 1000px;
   margin: 15px 0;
 }
 .card{
     display: flex;
-    /* border: yellowgreen solid 5px; */
     flex-direction: column;
     align-items: center;
-    /* width: 33%; */
-    /* height: 155px; */
 }
 .item {
+  display: flex;
   width: 55%;
+  max-width: 250px;
   height: auto;
-  border: solid 5px #264653;;
+  border: solid 5px #00b0fc;;
   border-radius: 15%;
+  flex-grow: 0;
 }
 .cardLabel{
-    color: #264653;
+    color: #09152b;
     margin-top: auto;
     padding: 5px;
     font-weight: 900;
+    font-size:x-large;
+    text-shadow: -1px 0 rgb(240, 232, 232), 0 1px rgb(216, 207, 207), 1px 0 rgb(196, 186, 186), 0 -1px rgb(167, 151, 151);
 }
+.results .card .cardLabel{
+    color: #00b0fc;
+}
+
 .bottom{
-    height: 33px;
+    height: 38px;
     flex-shrink: 1;
     margin: 25px 0;
 }
 p{
-    color: #264653;
+    color: #035cc2;
     text-align: center;
     margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        padding:0;
+    }
+    .results{
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+    }
+    .item{
+        width: 50%;
+    }
+    .cardLabel{
+        font-size: large;
+    }
 }
