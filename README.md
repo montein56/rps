@@ -32,4 +32,22 @@ Here is the plan:
         Added 'defer' to script tag in html head
 5 Jan:
     Re-studied Flex & StickyFooters to keep images at base of screen
-    4:30 pm. Going well. Flexing nicely - mobile modes too [@media]. Added boxes to display opponents' choices.
+    4:30 pm. Going well. Flexing nicely - mobile modes too [@media]. Added boxes to display opponents' choices (hidden to start).
+        Start box 'select weapon' shows first.
+6 Jan:
+        changed paper image
+        renamed image file names to be same as computer and player choices as returned
+
+        Click:
+            hide start box
+            set userInput to weapon name
+
+
+
+
+TODO
+    play image background shadows glow
+    add hover to 3 images
+    link to credits page
+            
+

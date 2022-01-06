@@ -34,18 +34,21 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     while (playerScore < 5 && computerScore < 5){
     let playerSelection="";
-    let userInput=null;
     const computerSelection = computerPlay();
+    console.log(`computer selected ${computerSelection}`);    
+    const compChoice = document.getElementById('compChoice');
+    const compChoiceImage = compChoice.firstElementChild;
+    compChoiceImage.setAttribute('src',`../rps/images/${computerSelection}`);
+    compChoice.classList.remove('hidden');
     
-// Screen for user input to allow only R, P or S
-    userInput = window.prompt("Select your weapon", "ROCK - PAPER - SCISSORS : To exit, type 'q'");
-    
-    while (userInput == null || userInput == "" || userInput == 'q' || userInput == "ROCK - PAPER - SCISSORS : To exit, type 'q'") {
-        console.log('Either you chose to quit OR your input is invalid. Game is quitting');
-        return;
-    }
-    playerSelection = userInput.toUpperCase();
-    console.log(`You selected ${playerSelection}`);
+    // Screen for user input to allow only R, P or S
+    // userInput = window.prompt("Select your weapon", "ROCK - PAPER - SCISSORS : To exit, type 'q'")
+
+    // while (userInput == null || userInput == "" || userInput == 'q' || userInput == "ROCK - PAPER - SCISSORS : To exit, type 'q'") {
+    //     console.log('Either you chose to quit OR your input is invalid. Game is quitting');
+    //     return;
+    // }
+    playerSelection = userInput;
     
     playRound(playerSelection, computerSelection);
     gameTally++;
@@ -64,3 +67,15 @@ let computerScore = 0;
 let gameTally = 0;
 
 // game();
+//On click of an image save image id to userInput
+function choice(image){
+    userInput=image.id;
+    console.log(userInput);
+    const start = document.getElementById('start')
+    start.textContent= `You chose: ${userInput}`;
+    const playerChoice = document.getElementById('playerChoice');
+    const playerChoiceImage = playerChoice.firstElementChild;
+    playerChoiceImage.setAttribute('src',`../rps/images/${userInput}`);
+    playerChoice.classList.remove('hidden');
+    game();
+}

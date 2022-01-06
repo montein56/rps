@@ -18,27 +18,28 @@
 </header>
 
 <div class="results">
-    <div class="card">
-        <img class="item" src="../rps/images/scissors3.jpeg">
+    <div id="playerChoice" class="card hidden">
+        <img class="item" src="">
         <p class="cardLabel">YOUR PLAY</p>
     </div>
-    <div class="card">
-        <img class="item" src="../rps/images/rock.jpeg">
+    <div id="start"><strong>TO START</strong><br><br>Select your weapon below</div>
+    <div id="compChoice" class="card hidden">
+        <img class="item" src="">
         <p class="cardLabel">ROBOT PLAY</p>
     </div>
 </div>
 
 <div class="thumbArea">
     <div class="card">
-        <img class="item" src="../rps/images/rock.jpeg">
+        <img id="ROCK" class="item" src="../rps/images/ROCK" onclick="choice(this)">
         <p class="cardLabel">ROCK</p>
     </div> 
     <div class="card">
-        <img class="item" src="../rps/images/paper">
+        <img id="PAPER" class="item" src="../rps/images/PAPER" onclick="choice(this)">
         <p class="cardLabel">PAPER</p>
     </div> 
     <div class="card">
-        <img class="item" src="../rps/images/scissors3.jpeg">
+        <img id="SCISSORS" class="item" src="../rps/images/SCISSORS" onclick="choice(this)">
         <p class="cardLabel">SCISSORS</p>
     </div> 
 </div>

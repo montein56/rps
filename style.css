@@ -93,3 +93,15 @@ p{
         font-size: large;
     }
 }
+.hidden{
+    visibility: hidden;
+}
+
+#start{
+    color: #00b0fc;
+    border: solid #00b0fc 3px;
+    border-radius: 5%;
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+}
