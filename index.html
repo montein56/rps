@@ -5,45 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPER etc etc etc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script> -->
     <link rel="stylesheet" href="../rps/style.css">
     <script src="../rps/script.js" defer></script>
 </head>
 
 <body>
-
+   
+<!-- STATIC HEADER -->
 <header>
     <h1>ROCK</h1>
     <h1>PAPER</h1>
-    <h1>SCISSORS</h1>
+    <h1>SCISSORS</h1>    
 </header>
 
-<div class="results">
-    <div id="playerChoice" class="card hidden">
-        <img class="item" src="">
-        <p class="cardLabel">YOUR PLAY</p>
+<audio id="gameTune">
+    <source src="../rps/sounds/game-music-7408.mp3" type="audio/mp3">
+</audio>
+<audio id="winTune">
+    <source src="../rps/sounds/shotgun-firing-4-6746.mp3" type="audio/mp3">
+</audio>
+<audio id="loseTune">
+    <source src="../rps/sounds/power-down-7103.mp3" type="audio/mp3">
+</audio>
+
+<!-- RESULTS AREA with 2 'boards' to display messages/ solicit user choices -->
+<div id="results" class="hidden">;
+    <div id="boardLeft"></div>
+
+    <div id="playerChoice" class="card">
+        <img class="resultImg" src="">
+        <p class="cardLabel">YOU</p>
     </div>
-    <div id="start"><strong>TO START</strong><br><br>Select your weapon below</div>
-    <div id="compChoice" class="card hidden">
-        <img class="item" src="">
-        <p class="cardLabel">ROBOT PLAY</p>
+
+    <div id="compChoice" class="card">
+        <img class="resultImg" src="">
+        <p class="cardLabel">ROBOT</p>
     </div>
+
+    <div id="boardRight"></div>
 </div>
 
-<div class="thumbArea">
+<!-- SEPARATE 'board' to display scores -->
+<div id="boardCenter"><strong>TO START</strong><br><br>Select your weapon below.<br><br> First to 5 wins!</div>
+
+<!-- THUMB AREA with 3 weapons to select -->
+<div id="thumb" class="thumbArea">
     <div class="card">
-        <img id="ROCK" class="item" src="../rps/images/ROCK" onclick="choice(this)">
+        <img id="ROCK" class="item" src="../rps/images/ROCK">
         <p class="cardLabel">ROCK</p>
     </div> 
     <div class="card">
-        <img id="PAPER" class="item" src="../rps/images/PAPER" onclick="choice(this)">
+        <img id="PAPER" class="item" src="../rps/images/PAPER">
         <p class="cardLabel">PAPER</p>
     </div> 
     <div class="card">
-        <img id="SCISSORS" class="item" src="../rps/images/SCISSORS" onclick="choice(this)">
+        <img id="SCISSORS" class="item" src="../rps/images/SCISSORS">
         <p class="cardLabel">SCISSORS</p>
     </div> 
 </div>
 
+<!-- FOOTER -->
 <div class="bottom">
     <p><em>designed and created by </em>NormanM, <em>on a project with </em> <br><strong>The Odin Project (TOP)</strong><br></p>
 </div>

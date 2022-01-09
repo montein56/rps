@@ -49,5 +49,7 @@ TODO
     play image background shadows glow
     add hover to 3 images
     link to credits page
+
+    Music by <a href="/users/deepmusiceveryday-6071206/?tab=audio&amp;utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=audio&amp;utm_content=7408">DeepMusicEveryDay</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=7408">Pixabay</a>
             
 
