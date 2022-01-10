@@ -33,10 +33,12 @@ const game = function() { // THIS FUNCTION HAS TO BE ABOVE the lines below it th
             return;
         } else if (playerScore == 5) {//set the display
             boardLeft.textContent = "Game Over: YOU WON";
+            pauseGameTune();
             playWinTune();
             gameOver();
         } else if (computerScore == 5) {//set the display
             boardLeft.textContent = "Game Over: YOU LOST";
+            pauseGameTune();
             playLoseTune();
             gameOver();
         }
@@ -64,7 +66,6 @@ function setDisplay(x, y){
 }
 
 function gameOver(){
-    pauseGameTune();
     setTimeout(function() {
         boardLeft.style["boxShadow"] = "3px 3px 40px 20px #f00";
         results.classList.remove("hidden");//turn on center 
@@ -98,7 +99,6 @@ function quit(){
 function again(){
     location.reload();
 }
-
 
 function computerPlay() {
     const arr = ['ROCK', 'PAPER', 'SCISSORS'];
