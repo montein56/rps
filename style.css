@@ -1,12 +1,14 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
   align-items: center;
   background-image: linear-gradient(#09152b, #035cc2, #00b0fc);
+  /* margin:0; */
 }
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 header{
     display: flex;
@@ -25,19 +27,39 @@ h1 {
 .hidden{
     visibility: hidden;
 }
-#results {
+#results{
+    display: flex;
+}
+#playerChoice, #compChoice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.resultImg{
+    width: 35%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 15%;
+    padding: 0 65px;
+    margin: 10px 0;
+  }
+
+#resultsScores {
   display: flex;
   flex: 1 1 auto;
   justify-content: space-evenly;
   align-items: center;
 }
-#results .card .cardLabel{
-    color: #00b0fc;
+#results .cardLabel{
+    color: whitesmoke;
 }
+
+
 #boardLeft, #boardRight, #boardCenter{
-    color: #00b0fc;
+    color: #f5f5f5;
     text-align: center;
-    font-size: x-large;
+    font-size:x-large;
     white-space: break-spaces;
 }
 #boardCenter{
@@ -48,21 +70,11 @@ h1 {
 }
 #boardRight, #boardLeft{
     width: 20%;
-    background: rgb(29, 29, 105, 0.1);
 }
-#boardRight:hover, #boardLeft:hover, #boardRight:active, #boardLeft:active{
-    /* border: solid #09152b 4px; */
-    /* box-shadow: 3px 3px 40px 20px #0ff; */
-    cursor: pointer;
-}
-.resultImg{
-  display: flex;
-  width: 33%;
-  max-width: 200px;
-  height: auto;
-  border: solid 5px #00b0fc;;
-  border-radius: 15%;
-  flex-grow: 0;
+
+.HoverClass1:hover {
+    color: blue !important; background-color: green !important;
+    cursor: pointer;    
 }
 
 /* THUMB AREA */
@@ -73,15 +85,19 @@ h1 {
   max-width: 1000px;
   margin: 15px 0;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .thumbArea img:hover, .thumbArea img:active{
     border: solid #09152b 4px;
     box-shadow: 3px 3px 40px 20px #0ff;
+    cursor:pointer;
 }
+
+button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: content-box;
+}
+
 .item {
   display: flex;
   width: 55%;
@@ -90,25 +106,27 @@ h1 {
   border: solid 5px #00b0fc;;
   border-radius: 15%;
   flex-grow: 0;
+  
 }
 .cardLabel{
-    color: #09152b;
     margin-top: auto;
-    padding: 5px;
     font-weight: 900;
-    font-size:large;
+    font-size:x-large;
 }
 
 /* FOOTER AREA */
 .bottom{
-    height: 38px;
+    height: 10%;
     flex-shrink: 1;
-    margin: 25px 0;
+    margin-bottom: 15px 0;
+    text-align: center;
+    /* padding-bottom: 3px; */
 }
 
 /* COMMON */
 p{
-    color: #035cc2;
+    /* width:auto; */
+    color: whitesmoke;
     text-align: center;
     margin: 0;
 }
@@ -120,15 +138,19 @@ p{
         flex-direction: column;
     }
     h1{
-        padding:0;
+        padding: 5% 0;
+        font-size: larger;
+    }
+    #results{
+        margin-top: 5%;
     }
     .item{
         width: 50%;
     }
     #boardLeft, #boardRight, #boardCenter{
-        font-size: medium;
+        font-size:large ;
     }
     .cardLabel{
-        font-size: medium;
+        font-size:medium;
     }
 }

@@ -36,36 +36,36 @@
 
 <!-- RESULTS AREA with 2 'boards' to display messages/ solicit user choices -->
 <div id="results" class="hidden">;
-    <div id="boardLeft"></div>
-
-    <div id="playerChoice" class="card">
+    <div id="playerChoice">
         <img class="resultImg" src="">
-        <p class="cardLabel">YOU</p>
+        <p class="cardLabel">YOU CHOSE</p>
     </div>
 
-    <div id="compChoice" class="card">
+    <div id="compChoice">
         <img class="resultImg" src="">
-        <p class="cardLabel">ROBOT</p>
+        <p class="cardLabel">ROBOT CHOSE</p>
     </div>
-
-    <div id="boardRight"></div>
 </div>
 
 <!-- SEPARATE 'board' to display scores -->
-<div id="boardCenter"><strong>TO START</strong><br><br>Select your weapon below.<br><br> First to 5 wins!</div>
+<div id="resultsScores">
+    <div id="boardLeft"></div>
+    <div id="boardCenter"><strong>TO START</strong><br><br>Select your weapon below.<br><br> First to 5 wins!</div>
+    <div id="boardRight"></div>
+</div>
 
 <!-- THUMB AREA with 3 weapons to select -->
 <div id="thumb" class="thumbArea">
-    <div class="card">
-        <img id="ROCK" class="item" src="../rps/images/ROCK">
+    <div >
+        <button><img id="ROCK" class="item" src="../rps/images/ROCK"></button>
         <p class="cardLabel">ROCK</p>
     </div> 
-    <div class="card">
-        <img id="PAPER" class="item" src="../rps/images/PAPER">
+    <div>
+        <button><img id="PAPER" class="item" src="../rps/images/PAPER"></button>
         <p class="cardLabel">PAPER</p>
     </div> 
-    <div class="card">
-        <img id="SCISSORS" class="item" src="../rps/images/SCISSORS">
+    <div>
+    <button><img id="SCISSORS" class="item" src="../rps/images/SCISSORS"></button>
         <p class="cardLabel">SCISSORS</p>
     </div> 
 </div>

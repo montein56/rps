@@ -61,7 +61,10 @@ function setDisplay(x, y){
     boardRight.textContent = (resultRight);
 
     //SET SCORE BOARD
-    boardCenter.textContent= `GAME TALLY:  ${gameTally} \u000a You:  ${playerScore}\u000aRobot: ${computerScore}`;
+    boardCenter.textContent= `GAMES PLAYED:  ${gameTally} \u000a You:  ${playerScore}\u000a Robot: ${computerScore}`;
+    boardLeft.style.backgroundColor != 'dodgerblue' ? boardLeft.style.backgroundColor = 'dodgerblue' :  boardLeft.style.backgroundColor = 'transparent';
+    boardRight.style.backgroundColor != 'transparent' ? boardRight.style.backgroundColor = 'transparent' :  boardRight.style.backgroundColor = 'dodgerblue';
+    
     results.classList.add("hidden");//to remove last play results
 }
 
@@ -74,19 +77,22 @@ function gameOver(){
     thumb.style["opacity"] = ".1"; //thumb area images/text
     playerChoice.style["opacity"] = ".1";
     compChoice.style["opacity"] = ".1";
+
+    boardRight.classList.add('HoverClass1');
+    boardLeft.classList.add('HoverClass1');
     
     setTimeout(function() {//change center display: QUIT? AGAIN?
-        boardRight.style["boxShadow"] = "3px 3px 40px 20px #0f0";
-        boardRight.style.backgroundColor = "#0f0";
+        boardRight.style["boxShadow"] = "3px 3px 40px 20px blue";
+        boardRight.style.backgroundColor = "blue";
         boardRight.textContent = "PLAY again?";
-        boardLeft.style["boxShadow"] = "3px 3px 40px 20px #0f0";
-        boardLeft.style.backgroundColor = "#0f0";
+        boardLeft.style["boxShadow"] = "3px 3px 40px 20px blue";
+        boardLeft.style.backgroundColor = "blue";
         boardLeft.textContent = "QUIT game?";
     }, 2000);
  
     setTimeout(function() {
         replay();
-    }, 3000);
+    }, 2000);
 }
 
 function replay(){
